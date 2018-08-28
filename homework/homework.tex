@@ -1,0 +1,91 @@
+\documentclass{exam} % {{{1
+\usepackage{amsmath, amssymb, amsthm, enumitem, float, caption, mathtools, tikz}
+\usetikzlibrary{arrows, calc, decorations.markings, matrix, positioning}
+\tikzset{>=latex}
+\usepackage[final]{hyperref}
+
+% mathbb and mathcal symbols
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\V}{\mathcal{V}}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\m}[1]{\mathbb{#1}}    % for models
+\newcommand{\cl}[1]{\mathcal{#1}}  % for classes
+
+% theorems and similar environments
+\theoremstyle{plain}
+  \newtheorem{thm}{Theorem}[section]  \newtheorem*{thm*}{Theorem}
+  \newtheorem{claim}{Claim}[thm]      \newtheorem*{claim*}{Claim}
+  \newtheorem{conj}{Conjecture}[thm]  \newtheorem*{conj*}{Conjecture}
+  \newtheorem{cor}{Corollary}[thm]    \newtheorem*{cor*}{Corollary}
+  \newtheorem{lem}{Lemma}[thm]        \newtheorem*{lem*}{Lemma}
+  \newtheorem{prop}{Proposition}[thm] \newtheorem*{prop*}{Proposition}
+\theoremstyle{definition}
+  \newtheorem{defn}{Definition}[thm] \newtheorem*{defn*}{Definition}
+\theoremstyle{remark}
+  \newtheorem{rk}{Remark}[thm]  \newtheorem*{rk*}{Remark}
+  \newtheorem{ex}{Example}[thm] \newtheorem*{ex*}{Example}
+\newcommand{\Case}[1]{\smallskip \textbf{Case #1:}}
+\newenvironment{claimproof} {
+  \begin{proof}[Proof of claim]
+  \renewcommand{\qedsymbol}{\ensuremath{\bullet}}
+  } {
+  \end{proof}
+  }
+
+% custom commands
+\DeclareMathOperator{\Cg}{Cg}
+\DeclareMathOperator{\Clo}{Clo}
+\DeclareMathOperator{\Con}{Con}
+\DeclareMathOperator{\Rel}{Rel}
+\DeclareMathOperator{\Sg}{Sg}
+\DeclareMathOperator{\diag}{diag}
+\newcommand{\bmat}[1]{\ensuremath{ \begin{bmatrix} #1 \end{bmatrix} }}
+\newcommand{\Bmat}[1]{\ensuremath{ \begin{Bmatrix} #1 \end{Bmatrix} }}
+\newcommand{\pmat}[1]{\ensuremath{ \begin{pmatrix} #1 \end{pmatrix} }}
+\newcommand{\ds}[1]{\ensuremath{ \displaystyle{#1} }}
+\newcommand{\stack}[2]{\genfrac{}{}{0pt}{}{#1}{#2}}
+
+% misc
+\pagestyle{foot} \cfoot{Page \thepage\ of \numpages}  % page numbering
+\numberwithin{equation}{section}  % number equations within sections
+\renewcommand{\d}{\;d}
+\renewcommand{\epsilon}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+
+% exam documentclass settings
+% restyle parts and subparts
+\renewcommand{\thepartno}{\roman{partno}}
+\renewcommand{\thesubpart}{\alph{subpart}}
+\renewcommand{\subpartlabel}{(\thesubpart)}
+\renewcommand{\subsubpartlabel}{(\thesubsubpart)}
+% restyle multiple choice options
+\renewcommand{\choicelabel}{\thechoice)}
+% true or false questions (use \TFQuestion)
+\newcommand{\TrueFalse}{\hspace*{0.25em}\textbf{True}\hspace*{1.25em}\textbf{False}\hspace*{1em}}
+\newlength{\mylena} \newlength{\mylenb} \settowidth{\mylena}{\TrueFalse}
+\newcommand{\TFQuestion}[1]{
+  \setlength{\mylenb}{\linewidth}
+  \addtolength{\mylenb}{-121.15pt}
+  \parbox[t]{\mylena}{\TrueFalse}\parbox[t]{\mylenb}{#1}
+}
+
+% document specific stuff
+\usepackage{listings}
+%----------------------------------------------------------------------------}}}1
+
+\begin{document}  % \printanswers
+% title header {{{
+\title{ENTER TITLE}
+\author{ENTER AUTHOR}
+\date{Due: ENTER DUE DATE}
+\maketitle
+%----------------------------------------------------------------------------}}}
+\begin{questions}
+%----------------------------------------------------------------------------}}}
+\question Enter Questions
+%----------------------------------------------------------------------------}}}
+
+\end{questions}
+\end{document}
